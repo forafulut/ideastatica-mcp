@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ideastatica-mcp"
+version = "0.1.0"
+description = "Model Context Protocol (MCP) server that lets Claude drive IDEA StatiCa Connection through its REST API"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Bora Bulut" }]
+keywords = ["mcp", "idea statica", "structural engineering", "steel connections", "cbfem"]
+dependencies = [
+    "mcp>=2.2,<3",
+    "ideastatica-connection-api>=26.0.5,<26.1",
+    "pydantic>=2",
+    "anyio>=4",
+    "pillow>=10",
+    "pymupdf>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-timeout>=2"]
+
+[project.scripts]
+ideastatica-mcp = "ideastatica_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ideastatica_mcp = ["resources/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live: requires a running IDEA StatiCa Connection REST API service (set IDEASTATICA_LIVE=1)",
+]
+timeout = 600

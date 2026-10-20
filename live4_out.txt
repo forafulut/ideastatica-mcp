@@ -1,0 +1,31 @@
+
+=== service_status (error=False, content=['text']) ===
+{
+  "mode": "attached",
+  "state": "ready",
+  "url": "http://127.0.0.1:5055",
+  "reachable": true,
+  "service_version": "26.0.5.1427",
+  "managed_process": {
+    "running": false,
+    "pid": null,
+    "adopted": false,
+    "seconds_since_start": null,
+    "log_file": null,
+    "last_log_lines": []
+ 
+
+=== open_project (error=False, content=['text']) ===
+{
+  "source_path": "C:\\Users\\Macbook\\Desktop\\CLAUDE\\ideastatica-mcp\\tests\\fixtures\\simple-project.ideaCon",
+  "active": true,
+  "project": {
+    "project_id": "ee6d2329-32a6-44a1-a9d7-f621508496d8",
+    "name": "",
+    "description": "",
+    "project_number": "",
+    "author": "",
+    "desig
+
+=== calculate (error=True, content=['text']) ===
+Error executing tool calculate: calculation job ca218494-663f-4c44-ad69-0fd770b17346 exceeded 1800s and was cancelled

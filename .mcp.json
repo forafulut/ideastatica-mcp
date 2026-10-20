@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ideastatica": {
+      "command": "C:\\Users\\Macbook\\Desktop\\CLAUDE\\ideastatica-mcp\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "ideastatica_mcp"],
+      "env": {
+        "IDEASTATICA_LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}

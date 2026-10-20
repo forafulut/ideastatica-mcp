@@ -1,0 +1,8 @@
+# Python bağımlılıkları (pyproject.toml ile aynı). Kurulum: pip install -r requirements.txt
+# ve ardından paketin kendisi:  pip install -e .
+mcp>=2.2,<3
+ideastatica-connection-api>=26.0.5,<26.1   # kurulu IDEA StatiCa sürümüyle eşleşmeli
+pydantic>=2
+anyio>=4
+pillow>=10
+pymupdf>=1.24
